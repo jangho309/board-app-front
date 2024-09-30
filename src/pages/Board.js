@@ -19,7 +19,7 @@ const Board = () => {
 
     const getBoard = useCallback(async () => {
         try {
-            const response = await axios.get(`http://175.45.203.57:9090/boards/${id}`, {
+            const response = await axios.get(`http://223.130.154.162:9090/boards/${id}`, {
                 headers: {
 					Authorization: `Bearer ${sessionStorage.getItem('ACCESS_TOKEN')}`
 				}
@@ -37,7 +37,7 @@ const Board = () => {
 
     const deleteBoard = useCallback(async () => {
         try {
-            const response = await axios.delete(`http://175.45.203.57:9090/boards/${id}`, {
+            const response = await axios.delete(`http://223.130.154.162:9090/boards/${id}`, {
                 headers: {
 					Authorization: `Bearer ${sessionStorage.getItem('ACCESS_TOKEN')}`
 				}
@@ -222,7 +222,7 @@ const Board = () => {
 
     const modify = useCallback(async (formData) => {
         try {
-            const response = await axios.patch(`http://175.45.203.57:9090/boards`, formData, {
+            const response = await axios.patch(`http://223.130.154.162:9090/boards`, formData, {
                 headers: {
                     Authorization: `Bearer ${sessionStorage.getItem('ACCESS_TOKEN')}`
                 }
